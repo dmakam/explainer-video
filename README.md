@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/ba43e40e-fc5f-4b2f-a0de-42d0b30950cf
+
 # explainer-video
 
 Turn a product page or brief into a **narrated, captioned explainer video**, using one JSON file and free, local tools.
