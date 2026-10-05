@@ -1,0 +1,50 @@
+{
+  "title": "Nimbus Notes",
+  "tag": "Product overview",
+  "output": "Nimbus-Notes-Overview",
+  "currency": "USD",
+  "brand": {
+    "name": "Nimbus",
+    "logo": "assets/logo.svg",
+    "logo_mono": true,
+    "colors": { "bg1": "#0B1026", "bg2": "#1B1F4B", "primary": "#5B6CFF", "accent": "#22D3EE" }
+  },
+  "voice": { "name": "bm_fable", "lang": "en-gb", "speed": 1.1 },
+  "spell_out": ["AI"],
+  "scenes": [
+    { "type": "title", "eyebrow": "Introducing", "headline": "Your notes, *finally organized*",
+      "sub": "Nimbus Notes turns scattered notes into answers.",
+      "price": { "amount": 8, "period": "mo" }, "chip": "Free 14-day trial",
+      "lines": [
+        { "text": "Your team's notes are everywhere. Nimbus Notes puts them in one place." },
+        { "text": "Plans start at $8.00/mo, with a free 14-day trial." }
+      ] },
+    { "type": "screenshot", "eyebrow": "Ask your notes", "headline": "Get answers, *not search results*",
+      "image": "assets/app-screen.png", "aspect": 1.5,
+      "focus": { "x": 0.16, "y": 0.1, "w": 0.8, "h": 0.1, "at": 1 },
+      "items": [ { "icon": "forum", "title": "Ask in plain English", "text": "Summaries with links to the source note" } ],
+      "lines": [
+        { "text": "Ask a question, and Nimbus answers from your own notes." },
+        { "text": "Every answer links back to the note it came from." }
+      ] },
+    { "type": "grid", "eyebrow": "Built for teams", "headline": "Three things teams *love*",
+      "items": [
+        { "icon": "group", "title": "Shared spaces", "text": "One place per team or project" },
+        { "icon": "task_alt", "title": "Tasks from notes", "text": "Action items become tasks automatically" },
+        { "icon": "lock", "title": "Private by default", "text": "You choose what is shared" }
+      ],
+      "lines": [
+        { "text": "Create a shared space for each team." },
+        { "text": "Turn action items into tasks." },
+        { "text": "And keep everything private until you share it." }
+      ] },
+    { "type": "pricing", "headline": "Simple *pricing*",
+      "plans": [
+        { "name": "Starter", "desc": "For individuals", "price": { "amount": 8, "period": "mo" }, "features": ["Unlimited notes", "Ask Nimbus", "1 shared space"] },
+        { "name": "Team", "badge": "Most popular", "desc": "For growing teams", "price": { "amount": 14.5, "period": "mo" }, "features": ["Everything in Starter", "Unlimited spaces", "Tasks from notes", "Admin controls"] }
+      ],
+      "lines": [ { "text": "Starter is $8/mo. Team is $14.50/mo per user." } ] },
+    { "type": "end", "headline": "Try Nimbus Notes *free*", "url": "nimbus.example.com",
+      "lines": [ { "text": "Try it free at nimbus.example.com." } ] }
+  ]
+}
