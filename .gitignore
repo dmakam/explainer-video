@@ -1,0 +1,6 @@
+build/
+*.mp4
+*.webm
+*-poster.jpg
+*-embed.html
+__pycache__/
