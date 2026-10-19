@@ -28,7 +28,7 @@ video.json ──tts.py──▶ narration.wav + timeline.json (exact per-senten
    Then send a one-line-per-scene storyboard and build. Don't loop for approval on wording; people react better to a rendered video.
 2. **Gather material.** Get the facts from the source page or doc only, and never invent features. Collect screenshots (PNG) and a logo, plus a white or one-colour logo version for dark backgrounds. Flag it to the user if the source contradicts itself.
 3. **One-time setup:** `bash scripts/setup.sh`. This installs kokoro-onnx, Playwright, the voice model, and the Poppins and Material Icons fonts into `~/.cache/explainer-video`. `ffmpeg` is also required.
-4. **Write `video.json`.** See the schema below and `examples/demo.json`.
+4. **Write `video.json`.** See the schema below and `examples/demo.json`. Write every line and every on-screen text with the Simplified Technical English rules in [Script language](#script-language-simplified-technical-english).
 5. **Run the narration:** `python3 scripts/tts.py video.json`. It prints each scene's length, so adjust the script until the total fits.
 6. **Build and check:** run `python3 scripts/build.py video.json`, then `python3 scripts/shots.py video.json` (one frame per scene, or `--every 12`). Look at `build/qa/sheet.jpg` and fix anything wrong before rendering.
 7. **Render:** `python3 scripts/render.py video.json --workers N`. It is resumable, and roughly 1 minute of video takes about 3 minutes on 2 CPUs. Then run `bash scripts/encode.sh video.json`.
@@ -79,6 +79,28 @@ Each **line** is one sentence. It appears as a caption and is spoken, and scene 
 - **Layout:** keep content above y ≈ 900, because two-line captions take the bottom band. Prefer 3–4 items per scene, 1–4 lines per scene, and under 20 words per line.
 - **Length:** at speed 1.1, about 150 spoken words is about 1 minute.
 - **Disclosure:** when sharing, say the narration is an AI voice (Kokoro, Apache-2.0).
+
+## Script language: Simplified Technical English
+
+Scripts follow the writing rules of **Simplified Technical English (STE, ASD-STE100)**, the controlled language that
+aerospace uses for maintenance manuals. Narration is heard once and read as a caption, so it must not be misread.
+This applies to narration lines, headlines, item titles and item text.
+
+- **One sentence, one idea.** Maximum 20 words per sentence; shorter is better.
+- **Active voice, present tense.** Say who does what: "Nimbus sorts your notes", not "Notes are sorted".
+- **Simple, common words.** Use a verb for an action, not a noun: "use", not "make use of"; "check", not "carry out a check".
+- **One word for one meaning.** Once you name a thing, use the same name every time. Use the product's own names exactly as the source writes them.
+- **No idioms, slang, hype or filler:** no "game-changer", "seamless", "unlock", "supercharge", "cutting-edge", "best-in-class".
+- **No semicolons or parentheses in narration.** Write numbers as digits. Keep articles ("the", "a"); do not write in telegraph style.
+
+| Instead of | Write |
+|---|---|
+| Unlock seamless collaboration across your entire organization. | Your team shares notes in one place. |
+| Reports can be generated in seconds by leveraging AI. | Nimbus writes the report in 10 seconds. |
+| It's a game-changer for busy teams; setup is a breeze. | Setup takes 5 minutes. You need no training. |
+
+When you describe this, say the scripts "use the writing rules of ASD-STE100". Do not call them STE-certified or
+STE-compliant: the full standard also has an approved-word dictionary, which this skill does not check.
 
 ## Extending the engine
 

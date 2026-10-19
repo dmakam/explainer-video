@@ -16,6 +16,8 @@ Turn a product page or brief into a **narrated, captioned explainer video**, usi
 
 It works as an **Agent Skill** for Claude (see `SKILL.md`) or as plain command-line scripts.
 
+Scripts are written with the rules of **Simplified Technical English** (ASD-STE100), the plain, controlled English that aerospace uses for maintenance manuals: one idea per sentence, active voice, simple words and no hype. See [SKILL.md](SKILL.md#script-language-simplified-technical-english).
+
 ## Quick start
 
 ```bash
