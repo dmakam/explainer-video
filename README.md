@@ -38,7 +38,12 @@ Copy `examples/demo.json`, then change the brand colours, logo, screenshots and 
 
 ## Use as a Claude skill
 
-Put this folder in your skills directory (for example `~/.claude/skills/explainer-video/`), or upload it as a skill. Then ask Claude: *"Make an explainer video for <page or doc>."*
+**Download:** on GitHub, press **Code → Download ZIP**. You get `explainer-video-main.zip`, which holds one folder with `SKILL.md`, the scripts and the template. The Simplified Technical English rules are part of `SKILL.md`, so they come with the download.
+
+- **Claude app:** upload the ZIP as it is where you add skills to Claude.
+- **Claude Code:** unzip it and rename the folder to `explainer-video`, then put it in your skills directory, for example `~/.claude/skills/explainer-video/`.
+
+Then ask Claude: *"Make an explainer video for <page or doc>."* The first run installs the voice model and fonts (`scripts/setup.sh`). The voice, render and encode steps run on a computer with Python and `ffmpeg`, so use it where Claude can run code.
 
 ## Credits and licences
 
